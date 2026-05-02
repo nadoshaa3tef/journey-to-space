@@ -34,11 +34,10 @@
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul id="navItems">
             <li id="userGreeting"></li>
-            <li><a href="#">News & Events</a></li>
-            <li><a href="#">Multimedia</a></li>
-            <li><a href="#">NASA+</a></li>
             <li><a href="pages/register.html">REGISTER</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#topics">EXPLORE</a></li>
+            <li><a href="#missions">MISSIONS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -101,12 +100,65 @@
     </section>
 
     <footer class="s-footer">
-      <div class="footer-content">
-        <p>&copy; 2026 Journey To Space. All Rights Reserved.</p>
-        <div class="visitor-counter">
-            <i class="fas fa-users"></i> Total Explorers: <span id="count">0</span>
+      <div class="footer-container">
+        <!-- Column 1: Brand/About -->
+        <div class="footer-column brand-col">
+          <div class="footer-logo">
+            <img src="assets/images/logo.jpg" alt="Journey To Space Logo" />
+            <span>JOURNEY TO SPACE</span>
+          </div>
+          <p>
+            Inspiring humanity to explore the vast wonders of the universe. 
+            Join us as we push the boundaries of science and discovery beyond Earth.
+          </p>
         </div>
-        <div class="footer-line"></div>
+
+        <!-- Column 2: Missions -->
+        <div class="footer-column" id="missions">
+          <h3>Missions</h3>
+          <ul>
+            <li><a href="#">Artemis I & II</a></li>
+            <li><a href="#">James Webb Telescope</a></li>
+            <li><a href="#">Mars Perseverance</a></li>
+            <li><a href="#">Voyager 1 & 2</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Latest News</a></li>
+            <li><a href="#">Space Exploration Hub</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Social -->
+        <div class="footer-column" id="contact">
+          <h3>Contact</h3>
+          <p>Mission Control Center</p>
+          <a href="mailto:info@journeytospace.com" class="contact-link">
+            info@journeytospace.com
+          </a>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-container">
+          <div class="visitor-counter">
+            <i class="fas fa-users"></i> Total Explorers:
+            <span id="count">0</span>
+          </div>
+          <p class="copyright">&copy; 2026 Journey To Space. All Rights Reserved.</p>
+        </div>
       </div>
     </footer>
 
