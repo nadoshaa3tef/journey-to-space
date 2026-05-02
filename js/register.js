@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const rocketLaunch = document.getElementById("rocketLaunch");
   const displayUserName = document.getElementById("displayUserName");
 
-  // 1. Password Strength Meter Logic
+  // 1. Password 
   passwordInput.addEventListener("input", () => {
     const val = passwordInput.value;
     let strength = 0;
