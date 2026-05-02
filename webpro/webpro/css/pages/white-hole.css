@@ -1,0 +1,127 @@
+:root {
+  --neon-color: #ff00ff80;
+  --background-dark: #000000;
+  --text-color: #e0e0e0;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-color);
+  font-family: "italic" Verdana, "Geneva", "Lucida Sans Unicode",
+    "Lucida Sans Regular", "Lucida Grande", "Lucida Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.main-container {
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 0 10px #ff00ff80;
+}
+
+.main-title {
+  font-size: 5em;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.7), 0 0 15px var(--neon-color),
+    0 0 30px var(--neon-color);
+  margin-bottom: 30px;
+  padding: 10px;
+  border-bottom: 2px solid var(--neon-color);
+}
+
+.content-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--neon-color);
+  box-shadow: 0 0 10px #ff00ff80;
+}
+
+.section-title {
+  font-size: 1.8em;
+  color: #fff;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  text-shadow: 0 0 20px var(--neon-color);
+}
+
+.text-content p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  text-shadow: 0 0 20px rebeccapurple;
+}
+
+::selection {
+  background: #ff002f83;
+}
+
+p:hover {
+  color: rgb(130, 86, 211);
+  text-shadow: 0 0 10px #bd0c8b7f;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.article-flex {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.text-content {
+  flex: 3;
+}
+
+.image-content {
+  flex: 1.5;
+  text-align: center;
+}
+
+.white-hole-video {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px var(--background-dark);
+}
+
+.image-caption {
+  font-size: 0.9em;
+  color: var(--neon-color);
+  margin-top: 10px;
+  text-shadow: 0 0 5px var(--neon-color);
+}
+
+@media (max-width: 768px) {
+  .article-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-content {
+    order: -1;
+  }
+}
+
+button {
+  background-color: #31074577;
+  color: #eee7f1;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #680c54;
+}

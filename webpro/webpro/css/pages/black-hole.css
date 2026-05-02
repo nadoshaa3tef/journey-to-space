@@ -1,0 +1,162 @@
+body {
+  background: radial-gradient(circle at top, #050010, #000000);
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#hole {
+  text-align: center;
+  font-size: 70px;
+  margin: 20px 0 40px;
+  letter-spacing: 8px;
+  color: white;
+  text-shadow: 0 0 10px #9b5cff, 0 0 20px #9b5cff, 0 0 40px #5a00ff;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #9b5cff;
+  }
+  to {
+    text-shadow: 0 0 30px #5a00ff;
+  }
+}
+
+.black-hole-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 120px;
+  border: 2px solid rgba(155, 92, 255, 0.3);
+  border-radius: 30px;
+  box-shadow: 0 0 40px rgba(155, 92, 255, 0.4),
+    inset 0 0 30px rgba(90, 0, 255, 0.3);
+  backdrop-filter: blur(6px);
+  margin: 40px;
+  position: relative;
+  flex: 1;
+}
+
+.black-hole-info {
+  width: 55%;
+  padding-right: 40px;
+}
+
+.black-hole-info h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  color: #b38bff;
+  text-shadow: 0 0 15px #6a00ff;
+  letter-spacing: 2px;
+}
+
+.black-hole-info p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: #dddddd;
+  transition: 0.4s ease;
+}
+
+.black-hole-info p:hover {
+  transform: translateX(10px);
+  color: #ffffff;
+  text-shadow: 0 0 8px #9b5cff;
+}
+
+.black-hole-video {
+  width: 40%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black-hole-video::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: radial-gradient(
+    circle,
+    rgba(155, 92, 255, 0.2) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.black-hole-video video {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(155, 92, 255, 0.6), inset 0 0 30px rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 1;
+}
+
+.black-hole-video video:hover {
+  box-shadow: 0 0 80px rgba(155, 92, 255, 0.8),
+    inset 0 0 40px rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 900px) {
+  .black-hole-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .black-hole-info,
+  .black-hole-video {
+    width: 100%;
+    padding: 0;
+  }
+
+  .black-hole-info {
+    margin-bottom: 40px;
+  }
+
+  .black-hole-video {
+    margin-top: 20px;
+  }
+
+  #hole {
+    font-size: 50px;
+    margin: 10px 0 30px;
+  }
+
+  .black-hole-info h2 {
+    font-size: 30px;
+  }
+
+  .black-hole-info p {
+    font-size: 16px;
+  }
+
+  .black-hole-video video {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  #hole {
+    font-size: 40px;
+    letter-spacing: 5px;
+  }
+
+  .black-hole-info h2 {
+    font-size: 26px;
+  }
+
+  .black-hole-video video {
+    max-width: 240px;
+  }
+}

@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Earth - The Solar System</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/pages/planets.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .earth-bg {
+        background: linear-gradient(90deg, #2e6da4, #6fc7de);
+      }
+      .earth-text {
+        color: #2e6da4;
+      }
+    </style>
+  </head>
+  <body class="earth">
+    <div class="container">
+      <nav class="nav-bar">
+        <a href="../solar-system.html" class="nav-link back-to-main">
+          <i class="fas fa-arrow-left"></i> Back to Solar System
+        </a>
+        <div class="nav-links">
+          <a href="earth.html#overview-content" class="nav-link"
+            ><i class="fas fa-globe"></i> Overview</a
+          >
+          <a href="earth.html#facts-content" class="nav-link"
+            ><i class="fas fa-lightbulb"></i> Facts</a
+          >
+          <a href="earth.html#exploration-content" class="nav-link"
+            ><i class="fas fa-rocket"></i> Exploration</a
+          >
+          <a href="earth.html#comparison-content" class="nav-link"
+            ><i class="fas fa-images"></i> Comparison</a
+          >
+        </div>
+      </nav>
+
+      <header class="planet-header">
+        <h1 class="planet-title earth-text">
+          <i class="fas fa-globe-americas"></i> Earth
+        </h1>
+        <p class="subtitle">The Blue Planet - Our home in the cosmos</p>
+        <div class="planet-distance">149.6 million km from Sun</div>
+      </header>
+
+      <input
+        type="radio"
+        id="overview-tab"
+        name="earth-tabs"
+        checked
+        class="tab-input"
+      />
+      <input type="radio" id="facts-tab" name="earth-tabs" class="tab-input" />
+      <input
+        type="radio"
+        id="exploration-tab"
+        name="earth-tabs"
+        class="tab-input"
+      />
+      <input
+        type="radio"
+        id="comparison-tab"
+        name="earth-tabs"
+        class="tab-input"
+      />
+
+      <div class="tab-labels">
+        <label for="overview-tab" class="tab-label earth-bg">
+          <i class="fas fa-globe"></i> Overview
+        </label>
+        <label for="facts-tab" class="tab-label earth-bg">
+          <i class="fas fa-lightbulb"></i> Key Facts
+        </label>
+        <label for="exploration-tab" class="tab-label earth-bg">
+          <i class="fas fa-rocket"></i> Exploration
+        </label>
+        <label for="comparison-tab" class="tab-label earth-bg">
+          <i class="fas fa-balance-scale"></i> Comparison
+        </label>
+      </div>
+
+      <div id="overview-content" class="tab-content">
+        <div class="planet-overview">
+          <div class="planet-image-container">
+            <img
+              src="/assets/images/planets/earth.png"
+              alt="Earth from space"
+              class="planet-main-image"
+            />
+          </div>
+          <div class="planet-info">
+            <h2>About Earth</h2>
+            <p>
+              Earth is the third planet from the Sun and the only astronomical
+              object known to harbor life. About 29% of Earth's surface is land
+              consisting of continents and islands, while the remaining 71% is
+              covered by water.
+            </p>
+
+            <p>
+              Earth's atmosphere consists mostly of nitrogen and oxygen, which
+              supports life. It has a magnetic field that protects life from
+              harmful solar radiation. Earth is the densest planet in the Solar
+              System and the largest of the four terrestrial planets.
+            </p>
+
+            <div class="planet-stats">
+              <div class="stat-box">
+                <div class="stat-label">Diameter</div>
+                <div class="stat-value">12,742 km</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Orbital Period</div>
+                <div class="stat-value">365.25 days</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Average Temperature</div>
+                <div class="stat-value">15°C</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Moons</div>
+                <div class="stat-value">1</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="facts-content" class="tab-content">
+        <h2>Interesting Facts About Earth</h2>
+        <div class="facts-grid">
+          <div class="fact-card earth-color">
+            <h3><i class="fas fa-tint"></i> Water World</h3>
+            <p>
+              Earth is the only planet in our solar system with liquid water on
+              its surface. About 71% of Earth's surface is covered in water.
+            </p>
+          </div>
+          <div class="fact-card earth-color">
+            <h3><i class="fas fa-leaf"></i> The Living Planet</h3>
+            <p>
+              Earth is the only place in the universe known to support life,
+              with millions of species of plants, animals, and microorganisms.
+            </p>
+          </div>
+          <div class="fact-card earth-color">
+            <h3><i class="fas fa-shield-alt"></i> Protective Atmosphere</h3>
+            <p>
+              Earth's atmosphere protects life by absorbing ultraviolet solar
+              radiation and reducing temperature extremes between day and night.
+            </p>
+          </div>
+          <div class="fact-card earth-color">
+            <h3><i class="fas fa-moon"></i> Our Large Moon</h3>
+            <p>
+              Earth has an unusually large natural satellite (the Moon) relative
+              to its own size. The Moon stabilizes Earth's axial tilt.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="exploration-content" class="tab-content">
+        <h2>Earth Observation & Space Exploration</h2>
+        <p>
+          While we live on Earth, space exploration has given us new
+          perspectives on our home planet:
+        </p>
+
+        <div class="facts-grid">
+          <div class="fact-card earth-color">
+            <h3>
+              <i class="fas fa-satellite"></i> Earth Observation Satellites
+            </h3>
+            <p>
+              Thousands of satellites monitor Earth's weather, climate, land
+              use, and environmental changes from space.
+            </p>
+          </div>
+          <div class="fact-card earth-color">
+            <h3><i class="fas fa-camera"></i> The Blue Marble</h3>
+            <p>
+              The iconic "Blue Marble" photograph taken by Apollo 17 astronauts
+              in 1972 gave humanity its first complete view of Earth.
+            </p>
+          </div>
+          <div class="fact-card earth-color">
+            <h3>
+              <i class="fas fa-space-station"></i> International Space Station
+            </h3>
+            <p>
+              The ISS provides a unique platform for observing Earth and
+              studying how living in space affects the human body.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="comparison-content" class="tab-content">
+        <h2>How Earth Compares</h2>
+        <div class="facts-grid">
+          <div class="fact-card earth-color">
+            <h3><i class="fas fa-weight"></i> Largest Terrestrial Planet</h3>
+            <p>
+              Earth is the largest of the four terrestrial planets (Mercury,
+              Venus, Earth, Mars) in our Solar System.
+            </p>
+          </div>
+          <div class="fact-card earth-color">
+            <h3><i class="fas fa-sun"></i> Perfect Distance</h3>
+            <p>
+              Earth orbits in the Sun's habitable zone where temperatures allow
+              liquid water to exist on the surface.
+            </p>
+          </div>
+          <div class="fact-card earth-color">
+            <h3><i class="fas fa-spinner"></i> Fast Rotation</h3>
+            <p>
+              Earth rotates once every 24 hours, creating the day-night cycle
+              that helps regulate temperatures across the planet.
+            </p>
+          </div>
+          <div class="fact-card earth-color">
+            <h3><i class="fas fa-layer-group"></i> Complex Structure</h3>
+            <p>
+              Earth has distinct layers: crust, mantle, outer core (liquid), and
+              inner core (solid) that generate our magnetic field.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>© 2026 Interactive Solar System Website | All Rights Reserved.</p>
+        <p>
+          Source: NASA Planetary Fact Sheet | Distances are average distances
+          from the Sun
+        </p>
+        <p class="note">
+          Earth - The only planet we know that sustains life, a precious oasis
+          in the cosmic ocean.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

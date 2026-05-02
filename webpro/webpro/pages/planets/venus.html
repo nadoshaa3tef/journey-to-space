@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venus - The Solar System</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/pages/planets.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .venus-bg {
+        background: linear-gradient(90deg, #d4a017e9, #b8860be9);
+      }
+      .venus-text {
+        color: #d4a017e9;
+      }
+    </style>
+  </head>
+  <body class="venus">
+    <div class="container">
+      <nav class="nav-bar">
+        <a href="../solar-system.html" class="nav-link back-to-main">
+          <i class="fas fa-arrow-left"></i> Back to Solar System
+        </a>
+        <div class="nav-links">
+          <a href="#overview-content" class="nav-link"
+            ><i class="fas fa-globe"></i> Overview</a
+          >
+          <a href="#facts-content" class="nav-link"
+            ><i class="fas fa-lightbulb"></i> Facts</a
+          >
+          <a href="#exploration-content" class="nav-link"
+            ><i class="fas fa-rocket"></i> Exploration</a
+          >
+          <a href="#comparison-content" class="nav-link"
+            ><i class="fas fa-images"></i> Comparison</a
+          >
+        </div>
+      </nav>
+
+      <header class="planet-header">
+        <h1 class="planet-title venus-text">
+          <i class="fas fa-globe-americas"></i> Venus
+        </h1>
+        <p class="subtitle">
+          Earth's "sister planet" and the hottest planet in our Solar System
+        </p>
+        <div class="planet-distance">108 million km from Sun</div>
+      </header>
+
+      <input
+        type="radio"
+        id="overview-tab"
+        name="venus-tabs"
+        checked
+        class="tab-input"
+      />
+      <input type="radio" id="facts-tab" name="venus-tabs" class="tab-input" />
+      <input
+        type="radio"
+        id="exploration-tab"
+        name="venus-tabs"
+        class="tab-input"
+      />
+      <input
+        type="radio"
+        id="comparison-tab"
+        name="venus-tabs"
+        class="tab-input"
+      />
+
+      <div class="tab-labels">
+        <label for="overview-tab" class="tab-label venus-bg">
+          <i class="fas fa-globe"></i> Overview
+        </label>
+        <label for="facts-tab" class="tab-label venus-bg">
+          <i class="fas fa-lightbulb"></i> Key Facts
+        </label>
+        <label for="exploration-tab" class="tab-label venus-bg">
+          <i class="fas fa-rocket"></i> Exploration
+        </label>
+        <label for="comparison-tab" class="tab-label venus-bg">
+          <i class="fas fa-balance-scale"></i> Comparison
+        </label>
+      </div>
+
+      <div id="overview-content" class="tab-content">
+        <div class="planet-overview">
+          <div class="planet-image-container">
+            <img
+              src="/assets/images/planets/venus.jpg"
+              alt="Venus"
+              class="planet-main-image"
+            />
+          </div>
+          <div class="planet-info">
+            <h2>About Venus</h2>
+            <p>
+              Venus is the second planet from the Sun and is often called
+              Earth's "sister planet" because of their similar size, mass, and
+              composition. However, that's where the similarities end.
+            </p>
+
+            <p>
+              Venus has the densest atmosphere of the four terrestrial planets,
+              consisting of more than 96% carbon dioxide. The atmospheric
+              pressure at the planet's surface is about 92 times that of Earth's
+              sea level.
+            </p>
+
+            <p>
+              Venus is shrouded by an opaque layer of highly reflective clouds
+              of sulfuric acid, preventing its surface from being seen from
+              space in visible light. It has the hottest planetary surface in
+              the Solar System, with a mean temperature of 464°C (867°F).
+            </p>
+
+            <div class="planet-stats">
+              <div class="stat-box">
+                <div class="stat-label">Diameter</div>
+                <div class="stat-value">12,104 km</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Orbital Period</div>
+                <div class="stat-value">225 days</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Average Temperature</div>
+                <div class="stat-value">464°C</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Rotation Period</div>
+                <div class="stat-value">243 days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="facts-content" class="tab-content">
+        <h2>Interesting Facts About Venus</h2>
+        <div class="facts-grid">
+          <div class="fact-card venus-color">
+            <h3><i class="fas fa-temperature-high"></i> Hottest Planet</h3>
+            <p>
+              Despite being further from the Sun than Mercury, Venus is the
+              hottest planet in our Solar System due to its extreme greenhouse
+              effect.
+            </p>
+          </div>
+          <div class="fact-card venus-color">
+            <h3><i class="fas fa-backward"></i> Retrograde Rotation</h3>
+            <p>
+              Venus rotates in the opposite direction to most planets in our
+              Solar System. A day on Venus is longer than its year!
+            </p>
+          </div>
+          <div class="fact-card venus-color">
+            <h3><i class="fas fa-cloud"></i> Acid Clouds</h3>
+            <p>
+              Venus is covered in thick clouds of sulfuric acid that reflect
+              about 75% of sunlight, making it the brightest natural object in
+              Earth's night sky after the Moon.
+            </p>
+          </div>
+          <div class="fact-card venus-color">
+            <h3><i class="fas fa-volcano"></i> Volcanic World</h3>
+            <p>
+              Venus has more volcanoes than any other planet in our Solar
+              System, with over 1,600 major volcanoes or volcanic features.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="exploration-content" class="tab-content">
+        <h2>Spacecraft Exploration</h2>
+        <p>Venus has been visited by numerous spacecraft since the 1960s:</p>
+
+        <div class="facts-grid">
+          <div class="fact-card venus-color">
+            <h3>
+              <i class="fas fa-space-shuttle"></i> Venera Program (1961-1984)
+            </h3>
+            <p>
+              A series of Soviet spacecraft that achieved many firsts: first to
+              enter another planet's atmosphere, first soft landing, and first
+              images from the surface.
+            </p>
+          </div>
+          <div class="fact-card venus-color">
+            <h3><i class="fas fa-satellite"></i> Magellan (1989-1994)</h3>
+            <p>
+              NASA's Magellan spacecraft mapped 98% of Venus's surface using
+              synthetic aperture radar to penetrate the thick clouds.
+            </p>
+          </div>
+          <div class="fact-card venus-color">
+            <h3><i class="fas fa-satellite-dish"></i> Current Missions</h3>
+            <p>
+              JAXA's Akatsuki (2015-present) studies Venus's atmosphere, and
+              upcoming missions include NASA's VERITAS and DAVINCI+ (planned for
+              2029-2030).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="comparison-content" class="tab-content">
+        <h2>How Venus Compares</h2>
+        <div class="facts-grid">
+          <div class="fact-card venus-color">
+            <h3><i class="fas fa-venus-mars"></i> Earth's Twin</h3>
+            <p>
+              Venus is often called Earth's twin because it's similar in size
+              (95% of Earth's diameter) and mass (81% of Earth's mass).
+            </p>
+          </div>
+          <div class="fact-card venus-color">
+            <h3><i class="fas fa-compress-arrows-alt"></i> Extreme Pressure</h3>
+            <p>
+              The pressure on Venus's surface is equivalent to being 900 meters
+              (3,000 feet) underwater on Earth - enough to crush a submarine.
+            </p>
+          </div>
+          <div class="fact-card venus-color">
+            <h3><i class="fas fa-sun"></i> Morning & Evening Star</h3>
+            <p>
+              Because its orbit is inside Earth's, Venus appears as either a
+              "morning star" or "evening star" and is the brightest planet in
+              our sky.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>© 2026 Interactive Solar System Website | All Rights Reserved.</p>
+        <p>
+          Source: NASA Planetary Fact Sheet | Distances are average distances
+          from the Sun
+        </p>
+        <p class="note">
+          Venus may look beautiful from Earth, but its surface is a hellish
+          landscape of extreme heat and pressure.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

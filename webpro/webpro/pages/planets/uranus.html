@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uranus - The Solar System</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/pages/planets.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .uranus-bg {
+        background: linear-gradient(90deg, #4fd0e7e9, #1b6f7ee9);
+      }
+      .uranus-text {
+        color: #4fd0e7e9;
+      }
+    </style>
+  </head>
+  <body class="uranus">
+    <div class="container">
+      <nav class="nav-bar">
+        <a href="../solar-system.html" class="nav-link back-to-main">
+          <i class="fas fa-arrow-left"></i> Back to Solar System
+        </a>
+        <div class="nav-links">
+          <a href="uranus.html#overview-content" class="nav-link"
+            ><i class="fas fa-globe"></i> Overview</a
+          >
+          <a href="uranus.html#facts-content" class="nav-link"
+            ><i class="fas fa-lightbulb"></i> Facts</a
+          >
+          <a href="uranus.html#exploration-content" class="nav-link"
+            ><i class="fas fa-rocket"></i> Exploration</a
+          >
+          <a href="uranus.html#comparison-content" class="nav-link"
+            ><i class="fas fa-images"></i> Comparison</a
+          >
+        </div>
+      </nav>
+
+      <header class="planet-header">
+        <h1 class="planet-title uranus-text">
+          <i class="fas fa-globe-americas"></i> Uranus
+        </h1>
+        <p class="subtitle">The ice giant that rotates on its side</p>
+        <div class="planet-distance">2.9 billion km from Sun</div>
+      </header>
+
+      <input
+        type="radio"
+        id="overview-tab"
+        name="uranus-tabs"
+        checked
+        class="tab-input"
+      />
+      <input type="radio" id="facts-tab" name="uranus-tabs" class="tab-input" />
+      <input
+        type="radio"
+        id="exploration-tab"
+        name="uranus-tabs"
+        class="tab-input"
+      />
+      <input
+        type="radio"
+        id="comparison-tab"
+        name="uranus-tabs"
+        class="tab-input"
+      />
+
+      <div class="tab-labels">
+        <label for="overview-tab" class="tab-label uranus-bg">
+          <i class="fas fa-globe"></i> Overview
+        </label>
+        <label for="facts-tab" class="tab-label uranus-bg">
+          <i class="fas fa-lightbulb"></i> Key Facts
+        </label>
+        <label for="exploration-tab" class="tab-label uranus-bg">
+          <i class="fas fa-rocket"></i> Exploration
+        </label>
+        <label for="comparison-tab" class="tab-label uranus-bg">
+          <i class="fas fa-balance-scale"></i> Comparison
+        </label>
+      </div>
+
+      <div id="overview-content" class="tab-content">
+        <div class="planet-overview">
+          <div class="planet-image-container">
+            <img
+              src="/assets/images/planets/uranus.jpg"
+              alt="Uranus"
+              class="planet-main-image"
+            />
+          </div>
+          <div class="planet-info">
+            <h2>About Uranus</h2>
+            <p>
+              Uranus is the seventh planet from the Sun and the third largest in
+              diameter in our Solar System. It's often described as an "ice
+              giant" because it's composed mostly of water, methane, and ammonia
+              ices above a small rocky core.
+            </p>
+
+            <p>
+              Uranus has the coldest planetary atmosphere in the Solar System,
+              with temperatures dropping as low as -224°C. What makes Uranus
+              truly unique is that it rotates on its side, with its axis tilted
+              at about 98 degrees relative to its orbital plane.
+            </p>
+
+            <div class="planet-stats">
+              <div class="stat-box">
+                <div class="stat-label">Diameter</div>
+                <div class="stat-value">50,724 km</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Orbital Period</div>
+                <div class="stat-value">84 Earth years</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Average Temperature</div>
+                <div class="stat-value">-195°C</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Moons</div>
+                <div class="stat-value">27</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="facts-content" class="tab-content">
+        <h2>Interesting Facts About Uranus</h2>
+        <div class="facts-grid">
+          <div class="fact-card uranus-color">
+            <h3><i class="fas fa-tilted-axis"></i> Sideways Rotation</h3>
+            <p>
+              Uranus rotates on its side with an axial tilt of 98 degrees. This
+              extreme tilt causes extreme seasonal variations, with each pole
+              getting about 42 years of continuous sunlight followed by 42 years
+              of darkness.
+            </p>
+          </div>
+          <div class="fact-card uranus-color">
+            <h3><i class="fas fa-icicles"></i> Coldest Planet</h3>
+            <p>
+              Despite being closer to the Sun than Neptune, Uranus holds the
+              record for the coldest temperature ever measured in the Solar
+              System: -224°C.
+            </p>
+          </div>
+          <div class="fact-card uranus-color">
+            <h3><i class="fas fa-wind"></i> Wind Speeds</h3>
+            <p>
+              Uranus has some of the fastest winds in the Solar System, reaching
+              speeds of up to 900 km/h (560 mph) despite its frigid
+              temperatures.
+            </p>
+          </div>
+          <div class="fact-card uranus-color">
+            <h3><i class="fas fa-rings"></i> Faint Rings</h3>
+            <p>
+              Uranus has 13 known rings, all very faint and dark. They're
+              composed of mostly large particles and dark material, unlike
+              Saturn's bright ice rings.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="exploration-content" class="tab-content">
+        <h2>Spacecraft Exploration</h2>
+        <p>Only one spacecraft has visited Uranus so far:</p>
+
+        <div class="facts-grid">
+          <div class="fact-card uranus-color">
+            <h3><i class="fas fa-satellite"></i> Voyager 2 (1986)</h3>
+            <p>
+              The only spacecraft to visit Uranus flew by in January 1986. It
+              discovered 10 new moons, studied the planet's unique atmosphere,
+              and revealed details about its ring system and magnetic field.
+            </p>
+          </div>
+          <div class="fact-card uranus-color">
+            <h3><i class="fas fa-telescope"></i> Ground-Based Observations</h3>
+            <p>
+              Since Voyager 2, most discoveries about Uranus have come from
+              telescopes like Hubble and advanced ground-based observatories,
+              which have revealed seasonal changes and discovered more moons.
+            </p>
+          </div>
+          <div class="fact-card uranus-color">
+            <h3><i class="fas fa-rocket"></i> Future Missions</h3>
+            <p>
+              NASA and ESA are considering several mission concepts to return to
+              Uranus, including orbiters and atmospheric probes that could
+              launch in the 2030s.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="comparison-content" class="tab-content">
+        <h2>How Uranus Compares</h2>
+        <div class="facts-grid">
+          <div class="fact-card uranus-color">
+            <h3><i class="fas fa-weight"></i> Size Comparison</h3>
+            <p>
+              Uranus is about 4 times wider than Earth. If Earth were a nickel,
+              Uranus would be about as big as a softball.
+            </p>
+          </div>
+          <div class="fact-card uranus-color">
+            <h3><i class="fas fa-calendar-alt"></i> Year Length</h3>
+            <p>
+              One year on Uranus equals 84 Earth years. A person born on Uranus
+              would celebrate their first birthday at age 84 in Earth years!
+            </p>
+          </div>
+          <div class="fact-card uranus-color">
+            <h3><i class="fas fa-atom"></i> Composition</h3>
+            <p>
+              Unlike Jupiter and Saturn (gas giants), Uranus is an ice giant,
+              meaning it has more "ices" like water, methane, and ammonia in its
+              composition.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>© 2026 Interactive Solar System Website | All Rights Reserved.</p>
+        <p>
+          Source: NASA Planetary Fact Sheet | Distances are average distances
+          from the Sun
+        </p>
+        <p class="note">
+          Uranus's unique sideways rotation and pale blue color make it one of
+          the most distinctive planets in our Solar System.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

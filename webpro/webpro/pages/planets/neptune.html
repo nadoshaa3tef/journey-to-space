@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neptune - The Solar System</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/pages/planets.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .neptune-bg {
+        background: linear-gradient(90deg, #32679ce9, #1e3a5fe9);
+      }
+      .neptune-text {
+        color: #32679ce9;
+      }
+    </style>
+  </head>
+  <body class="neptune">
+    <div class="container">
+      <nav class="nav-bar">
+        <a href="../solar-system.html" class="nav-link back-to-main">
+          <i class="fas fa-arrow-left"></i> Back to Solar System
+        </a>
+        <div class="nav-links">
+          <a href="neptune.html#overview-content" class="nav-link"
+            ><i class="fas fa-globe"></i> Overview</a
+          >
+          <a href="neptune.html#facts-content" class="nav-link"
+            ><i class="fas fa-lightbulb"></i> Facts</a
+          >
+          <a href="neptune.html#exploration-content" class="nav-link"
+            ><i class="fas fa-rocket"></i> Exploration</a
+          >
+          <a href="neptune.html#comparison-content" class="nav-link"
+            ><i class="fas fa-images"></i> Comparison</a
+          >
+        </div>
+      </nav>
+
+      <header class="planet-header">
+        <h1 class="planet-title neptune-text">
+          <i class="fas fa-globe-americas"></i> Neptune
+        </h1>
+        <p class="subtitle">
+          The windiest, coldest, and most distant planet in our Solar System
+        </p>
+        <div class="planet-distance">4.5 billion km from Sun</div>
+      </header>
+
+      <input
+        type="radio"
+        id="overview-tab"
+        name="neptune-tabs"
+        checked
+        class="tab-input"
+      />
+      <input
+        type="radio"
+        id="facts-tab"
+        name="neptune-tabs"
+        class="tab-input"
+      />
+      <input
+        type="radio"
+        id="exploration-tab"
+        name="neptune-tabs"
+        class="tab-input"
+      />
+      <input
+        type="radio"
+        id="comparison-tab"
+        name="neptune-tabs"
+        class="tab-input"
+      />
+
+      <div class="tab-labels">
+        <label for="overview-tab" class="tab-label neptune-bg">
+          <i class="fas fa-globe"></i> Overview
+        </label>
+        <label for="facts-tab" class="tab-label neptune-bg">
+          <i class="fas fa-lightbulb"></i> Key Facts
+        </label>
+        <label for="exploration-tab" class="tab-label neptune-bg">
+          <i class="fas fa-rocket"></i> Exploration
+        </label>
+        <label for="comparison-tab" class="tab-label neptune-bg">
+          <i class="fas fa-balance-scale"></i> Comparison
+        </label>
+      </div>
+
+      <div id="overview-content" class="tab-content">
+        <div class="planet-overview">
+          <div class="planet-image-container">
+            <img
+              src="/assets/images/planets/neptune.jpg"
+              alt="Neptune"
+              class="planet-main-image"
+            />
+          </div>
+          <div class="planet-info">
+            <h2>About Neptune</h2>
+            <p>
+              Neptune is the eighth and most distant planet from the Sun in our
+              Solar System. It's the fourth-largest planet by diameter and the
+              third-largest by mass, about 17 times the mass of Earth.
+            </p>
+
+            <p>
+              Neptune is known for its deep blue color, caused by methane in its
+              atmosphere. It has the strongest winds in the Solar System,
+              reaching speeds of up to 2,100 km/h (1,300 mph). A year on Neptune
+              lasts about 165 Earth years!
+            </p>
+
+            <div class="planet-stats">
+              <div class="stat-box">
+                <div class="stat-label">Diameter</div>
+                <div class="stat-value">49,244 km</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Orbital Period</div>
+                <div class="stat-value">165 years</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Average Temperature</div>
+                <div class="stat-value">-214°C</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Moons</div>
+                <div class="stat-value">14</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="facts-content" class="tab-content">
+        <h2>Interesting Facts About Neptune</h2>
+        <div class="facts-grid">
+          <div class="fact-card neptune-color">
+            <h3><i class="fas fa-wind"></i> Windiest Planet</h3>
+            <p>
+              Neptune has the strongest winds in the Solar System, reaching
+              speeds of up to 2,100 km/h (1,300 mph) - faster than the speed of
+              sound on Earth!
+            </p>
+          </div>
+          <div class="fact-card neptune-color">
+            <h3><i class="fas fa-ice-cream"></i> Ice Giant</h3>
+            <p>
+              Neptune is classified as an "ice giant" along with Uranus,
+              composed mostly of water, ammonia, and methane ices over a rocky
+              core.
+            </p>
+          </div>
+          <div class="fact-card neptune-color">
+            <h3><i class="fas fa-moon"></i> Triton's Strange Orbit</h3>
+            <p>
+              Neptune's largest moon, Triton, orbits in the opposite direction
+              of Neptune's rotation and is slowly spiraling inward toward the
+              planet.
+            </p>
+          </div>
+          <div class="fact-card neptune-color">
+            <h3><i class="fas fa-eye"></i> Great Dark Spot</h3>
+            <p>
+              Similar to Jupiter's Great Red Spot, Neptune had a Great Dark Spot
+              - an Earth-sized storm that disappeared when Hubble looked for it
+              in 1994.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="exploration-content" class="tab-content">
+        <h2>Spacecraft Exploration</h2>
+        <p>Only one spacecraft has visited Neptune so far:</p>
+
+        <div class="facts-grid">
+          <div class="fact-card neptune-color">
+            <h3><i class="fas fa-satellite"></i> Voyager 2 (1989)</h3>
+            <p>
+              The only spacecraft to visit Neptune, Voyager 2 flew by in 1989,
+              discovering six new moons, rings, and the Great Dark Spot storm
+              system.
+            </p>
+          </div>
+          <div class="fact-card neptune-color">
+            <h3><i class="fas fa-telescope"></i> Hubble Space Telescope</h3>
+            <p>
+              Hubble has provided detailed observations of Neptune's atmosphere,
+              storms, and ring system since its launch in 1990.
+            </p>
+          </div>
+          <div class="fact-card neptune-color">
+            <h3><i class="fas fa-satellite-dish"></i> Future Missions</h3>
+            <p>
+              Several Neptune orbiter missions have been proposed by NASA and
+              ESA, but none have been approved yet due to the long travel time
+              (10-12 years).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="comparison-content" class="tab-content">
+        <h2>How Neptune Compares</h2>
+        <div class="facts-grid">
+          <div class="fact-card neptune-color">
+            <h3><i class="fas fa-weight"></i> Size Comparison</h3>
+            <p>
+              Neptune is about 4 times wider than Earth. About 57 Earths could
+              fit inside Neptune.
+            </p>
+          </div>
+          <div class="fact-card neptune-color">
+            <h3><i class="fas fa-sun"></i> Distance Comparison</h3>
+            <p>
+              Neptune is so far from the Sun that sunlight takes over 4 hours to
+              reach it, compared to 8 minutes for Earth.
+            </p>
+          </div>
+          <div class="fact-card neptune-color">
+            <h3><i class="fas fa-calendar-day"></i> Year Length</h3>
+            <p>
+              Since its discovery in 1846, Neptune has completed less than one
+              full orbit around the Sun (it completes its first orbit in 2011).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>© 2026 Interactive Solar System Website | All Rights Reserved.</p>
+        <p>
+          Source: NASA Planetary Fact Sheet | Distances are average distances
+          from the Sun
+        </p>
+        <p class="note">
+          Neptune's deep blue atmosphere and violent storms make it one of the
+          most fascinating planets in our Solar System.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
