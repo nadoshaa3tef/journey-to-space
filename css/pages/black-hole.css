@@ -12,7 +12,10 @@ body {
   margin: 20px 0 40px;
   letter-spacing: 8px;
   color: white;
-  text-shadow: 0 0 10px #9b5cff, 0 0 20px #9b5cff, 0 0 40px #5a00ff;
+  text-shadow:
+    0 0 10px #9b5cff,
+    0 0 20px #9b5cff,
+    0 0 40px #5a00ff;
   animation: glow 2s infinite alternate;
 }
 
@@ -32,7 +35,8 @@ body {
   padding: 60px 120px;
   border: 2px solid rgba(155, 92, 255, 0.3);
   border-radius: 30px;
-  box-shadow: 0 0 40px rgba(155, 92, 255, 0.4),
+  box-shadow:
+    0 0 40px rgba(155, 92, 255, 0.4),
     inset 0 0 30px rgba(90, 0, 255, 0.3);
   backdrop-filter: blur(6px);
   margin: 40px;
@@ -96,13 +100,16 @@ body {
   max-width: 320px;
   height: auto;
   border-radius: 50%;
-  box-shadow: 0 0 50px rgba(155, 92, 255, 0.6), inset 0 0 30px rgba(0, 0, 0, 0.8);
+  box-shadow:
+    0 0 50px rgba(155, 92, 255, 0.6),
+    inset 0 0 30px rgba(0, 0, 0, 0.8);
   position: relative;
   z-index: 1;
 }
 
 .black-hole-video video:hover {
-  box-shadow: 0 0 80px rgba(155, 92, 255, 0.8),
+  box-shadow:
+    0 0 80px rgba(155, 92, 255, 0.8),
     inset 0 0 40px rgba(0, 0, 0, 0.9);
 }
 
