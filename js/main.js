@@ -13,7 +13,7 @@ const initAcademyState = () => {
       rank: "Cadet",
       xp: 0,
       missionsCompleted: [],
-      badges: []
+      badges: [],
     };
     localStorage.setItem(ACADEMY_STATE_KEY, JSON.stringify(state));
   }
@@ -22,14 +22,13 @@ const initAcademyState = () => {
 
 const getRankIcon = (rank) => {
   const icons = {
-    "Cadet": "fa-user-astronaut",
-    "Pilot": "fa-shuttle-space",
-    "Specialist": "fa-microscope",
-    "Commander": "fa-crown"
+    Cadet: "fa-user-astronaut",
+    Pilot: "fa-shuttle-space",
+    Specialist: "fa-microscope",
+    Commander: "fa-crown",
   };
   return icons[rank] || "fa-user-astronaut";
 };
-
 
 const renderDashboard = (state) => {
   const dashboard = $("academyDashboard");
@@ -57,18 +56,22 @@ const renderDashboard = (state) => {
       <div class="mission-stats">
         <div class="stat">
           <span class="stat-value">${completedCount}/${totalMissions}</span>
-          <span class="stat-label">Missions Cleared</span>
+          <span class="stat-label">Missions Completed</span>
         </div>
         <div class="stat">
           <span class="stat-value">${state.badges.length}</span>
           <span class="stat-label">Badges Earned</span>
         </div>
       </div>
-      ${isGraduated ? `
+      ${
+        isGraduated
+          ? `
         <button class="claim-cert-btn" id="claimCertBtn">
           <i class="fas fa-certificate"></i> CLAIM GRADUATION CERTIFICATE
         </button>
-      ` : ""}
+      `
+          : ""
+      }
     </div>
   `;
 
@@ -83,14 +86,14 @@ const renderDashboard = (state) => {
     const btn = card.querySelector(".btn");
 
     if (state.missionsCompleted.includes(missionId)) {
-      card.classList.add("mission-cleared");
+      card.classList.add("mission-completed");
       if (tag) {
-        tag.innerHTML = '<i class="fas fa-check-circle"></i> MISSION CLEARED';
+        tag.innerHTML = '<i class="fas fa-check-circle"></i> MISSION COMPLETED';
         tag.style.background = "#00ff88";
         tag.style.color = "#000";
       }
       if (btn) {
-        btn.innerHTML = "Review Intel";
+        btn.innerHTML = "Review Again";
         btn.style.borderColor = "#00ff88";
         btn.style.color = "#00ff88";
       }
@@ -100,10 +103,10 @@ const renderDashboard = (state) => {
 
 const showCertificate = (state) => {
   const userName = localStorage.getItem("astronautName") || "Elite Explorer";
-  const date = new Date().toLocaleDateString('en-US', { 
-    year: 'numeric', 
-    month: 'long', 
-    day: 'numeric' 
+  const date = new Date().toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   });
 
   const overlay = document.createElement("div");
@@ -113,7 +116,7 @@ const showCertificate = (state) => {
       <i class="fas fa-times cert-close" id="closeCert"></i>
       <div class="certificate">
         <div class="cert-header">
-          <h1>SPACE ACADEMY</h1>
+          <h1>JOURNEY TO SPACE</h1>
           <p>DIPLOMA OF COSMIC EXCELLENCE</p>
         </div>
         <div class="cert-body">
@@ -150,7 +153,7 @@ const showCertificate = (state) => {
   `;
 
   document.body.appendChild(overlay);
-  
+
   $("closeCert").onclick = () => overlay.remove();
   overlay.onclick = (e) => {
     if (e.target === overlay) overlay.remove();
