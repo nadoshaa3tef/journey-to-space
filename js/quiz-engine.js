@@ -6,19 +6,19 @@ const QUIZ_DATA = {
       {
         q: "Which planet is known as the Red Planet?",
         options: ["Venus", "Mars", "Jupiter", "Saturn"],
-        a: 1
+        a: 1,
       },
       {
         q: "What is the largest planet in our solar system?",
         options: ["Earth", "Saturn", "Jupiter", "Neptune"],
-        a: 2
+        a: 2,
       },
       {
         q: "Which celestial body is at the center of our solar system?",
         options: ["The Moon", "The Sun", "Jupiter", "Black Hole"],
-        a: 1
-      }
-    ]
+        a: 1,
+      },
+    ],
   },
   "black-hole.html": {
     id: "black-hole",
@@ -26,15 +26,25 @@ const QUIZ_DATA = {
     questions: [
       {
         q: "What is the boundary around a black hole called?",
-        options: ["The Outer Rim", "The Singularity", "The Event Horizon", "The Dark Zone"],
-        a: 2
+        options: [
+          "The Outer Rim",
+          "The Singularity",
+          "The Event Horizon",
+          "The Dark Zone",
+        ],
+        a: 2,
       },
       {
         q: "What happens to time near a black hole?",
-        options: ["It stops", "It speeds up", "It slows down", "It flows backwards"],
-        a: 2
-      }
-    ]
+        options: [
+          "It stops",
+          "It speeds up",
+          "It slows down",
+          "It flows backwards",
+        ],
+        a: 2,
+      },
+    ],
   },
   "galaxies.html": {
     id: "galaxies",
@@ -43,14 +53,14 @@ const QUIZ_DATA = {
       {
         q: "What type of galaxy is the Milky Way?",
         options: ["Elliptical", "Irregular", "Spiral", "Square"],
-        a: 2
+        a: 2,
       },
       {
         q: "What is the name of our closest neighbor galaxy?",
         options: ["Andromeda", "Orion", "Alpha Centauri", "Sombrero"],
-        a: 0
-      }
-    ]
+        a: 0,
+      },
+    ],
   },
   "white-hole.html": {
     id: "white-hole",
@@ -58,16 +68,26 @@ const QUIZ_DATA = {
     questions: [
       {
         q: "What is a white hole theorized to do?",
-        options: ["Suck in matter", "Eject matter and light", "Create stars", "Hide planets"],
-        a: 1
+        options: [
+          "Suck in matter",
+          "Eject matter and light",
+          "Create stars",
+          "Hide planets",
+        ],
+        a: 1,
       },
       {
         q: "Are white holes currently proven to exist?",
-        options: ["Yes, we have photos", "No, they are theoretical", "Only in other galaxies", "NASA confirmed them"],
-        a: 1
-      }
-    ]
-  }
+        options: [
+          "Yes, we have photos",
+          "No, they are theoretical",
+          "Only in other galaxies",
+          "NASA confirmed them",
+        ],
+        a: 1,
+      },
+    ],
+  },
 };
 
 const ACADEMY_STATE_KEY = "spaceAcademyState";
@@ -122,16 +142,23 @@ class QuizEngine {
     const container = document.getElementById("questionContainer");
     const dots = document.getElementById("quizDots");
 
-    dots.innerHTML = this.quizData.questions.map((_, i) => 
-      `<div class="dot ${i === this.currentQuestion ? 'active' : ''} ${i < this.currentQuestion ? 'done' : ''}"></div>`
-    ).join("");
+    dots.innerHTML = this.quizData.questions
+      .map(
+        (_, i) =>
+          `<div class="dot ${i === this.currentQuestion ? "active" : ""} ${i < this.currentQuestion ? "done" : ""}"></div>`,
+      )
+      .join("");
 
     container.innerHTML = `
       <div class="question-text">${q.q}</div>
       <div class="options-grid">
-        ${q.options.map((opt, i) => `
+        ${q.options
+          .map(
+            (opt, i) => `
           <button class="option-btn" onclick="quizEngine.handleAnswer(${i})">${opt}</button>
-        `).join("")}
+        `,
+          )
+          .join("")}
       </div>
     `;
   }
@@ -150,26 +177,26 @@ class QuizEngine {
     }
   }
 
-
   showResults() {
     const state = JSON.parse(localStorage.getItem(ACADEMY_STATE_KEY));
     const passed = this.score === this.quizData.questions.length;
     const container = document.getElementById("questionContainer");
-    
+
     if (passed) {
       this.updateAcademyState();
     }
 
     const updatedState = JSON.parse(localStorage.getItem(ACADEMY_STATE_KEY));
-    const isGraduated = updatedState && updatedState.missionsCompleted.length === 4;
+    const isGraduated =
+      updatedState && updatedState.missionsCompleted.length === 4;
 
     container.innerHTML = `
       <div class="results-container">
-        <i class="fas ${passed ? 'fa-check-circle success-icon' : 'fa-times-circle error-icon'}"></i>
-        <h2>${passed ? 'Mission Accomplished!' : 'Mission Failed'}</h2>
+        <i class="fas ${passed ? "fa-check-circle success-icon" : "fa-times-circle error-icon"}"></i>
+        <h2>${passed ? "Mission Accomplished!" : "Mission Failed"}</h2>
         <p>Score: ${this.score}/${this.quizData.questions.length}</p>
-        <p>${passed ? (isGraduated ? 'CONGRATULATIONS! You have completed all missions and graduated from the Academy!' : 'You earned 50 XP and a new badge!') : 'Review the briefing and try again.'}</p>
-        <button class="btn" onclick="window.location.href='../index.html'">${passed ? (isGraduated ? 'Claim My Certificate' : 'Return to Base') : 'Retry Mission'}</button>
+        <p>${passed ? (isGraduated ? "CONGRATULATIONS! You have completed all missions and graduated from the Academy!" : "You earned 50 XP and a new badge!") : "Review the briefing and try again."}</p>
+        <button class="btn" onclick="window.location.href='../index.html'">${passed ? (isGraduated ? "Claim My Certificate" : "Return to Base") : "Retry Mission"}</button>
       </div>
     `;
   }
