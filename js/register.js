@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const rocketLaunch = document.getElementById("rocketLaunch");
   const displayUserName = document.getElementById("displayUserName");
 
-  // 1. Password 
+  // 1. Password Strength Meter
   passwordInput.addEventListener("input", () => {
     const val = passwordInput.value;
     let strength = 0;
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
       val.length === 0 ? "" : val.length < 6 ? "Too short" : "Secure enough",
     );
 
-    // Also trigger confirm password check if it has a value
     if (confirmPasswordInput.value) {
       validateInput(
         confirmPasswordInput,
