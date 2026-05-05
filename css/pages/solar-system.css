@@ -242,12 +242,15 @@ h1 {
 .mercury .planet-icon {
   color: #524a47;
 }
+
 .venus .planet-icon {
   color: #524a47;
 }
+
 .earth .planet-icon {
   color: #524a47;
 }
+
 .mars .planet-icon {
   color: #524a47;
 }
@@ -286,15 +289,19 @@ h1 {
 .mercury .planet-name {
   color: #5b5856e9;
 }
+
 .venus .planet-name {
   color: #d16716e9;
 }
+
 .earth .planet-name {
   color: #4574bae9;
 }
+
 .mars .planet-name {
   color: #5f3617e9;
 }
+
 .jupiter .planet-name {
   color: #637535;
 }
