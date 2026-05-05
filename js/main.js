@@ -63,15 +63,14 @@ const renderDashboard = (state) => {
           <span class="stat-label">Badges Earned</span>
         </div>
       </div>
-      ${
-        isGraduated
-          ? `
+      ${isGraduated
+      ? `
         <button class="claim-cert-btn" id="claimCertBtn">
           <i class="fas fa-certificate"></i> CLAIM GRADUATION CERTIFICATE
         </button>
       `
-          : ""
-      }
+      : ""
+    }
     </div>
   `;
 

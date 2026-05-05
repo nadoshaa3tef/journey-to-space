@@ -105,20 +105,33 @@ class QuizEngine {
   }
 
   init() {
-    // Add quiz trigger button to the end of the content
-    const container = document.querySelector("section") || document.body;
-    const trigger = document.createElement("div");
-    trigger.className = "quiz-trigger-container";
-    trigger.innerHTML = `
-      <div class="mission-complete-card">
-        <h3>Intelligence Briefing Complete</h3>
-        <p>Ready to test your knowledge and earn XP?</p>
-        <button id="startQuizBtn" class="btn">Start Skill Assessment</button>
-      </div>
-    `;
-    container.appendChild(trigger);
+    // Check if the card already exists in the HTML
+    let card = document.querySelector(".mission-complete-card");
 
-    document.getElementById("startQuizBtn").onclick = () => this.startQuiz();
+    if (!card) {
+      // Create it if it doesn't exist (fallback)
+      const container = document.querySelector("footer, .s-footer, .footer") || document.body;
+      const trigger = document.createElement("div");
+      trigger.className = "quiz-trigger-container";
+      trigger.innerHTML = `
+        <div class="mission-complete-card">
+          <h3>Intelligence Briefing Complete</h3>
+          <p>Ready to test your knowledge and earn XP?</p>
+          <div class="btn">Start Skill Assessment</div>
+        </div>
+      `;
+
+      if (container && container.tagName === "FOOTER") {
+        container.parentNode.insertBefore(trigger, container);
+      } else {
+        document.body.appendChild(trigger);
+      }
+      card = trigger.querySelector(".mission-complete-card");
+    }
+
+    if (card) {
+      card.onclick = () => this.startQuiz();
+    }
   }
 
   startQuiz() {
@@ -153,12 +166,12 @@ class QuizEngine {
       <div class="question-text">${q.q}</div>
       <div class="options-grid">
         ${q.options
-          .map(
-            (opt, i) => `
+        .map(
+          (opt, i) => `
           <button class="option-btn" onclick="quizEngine.handleAnswer(${i})">${opt}</button>
         `,
-          )
-          .join("")}
+        )
+        .join("")}
       </div>
     `;
   }
@@ -220,5 +233,4 @@ class QuizEngine {
   }
 }
 
-// Global instance for onclick handlers
 window.quizEngine = new QuizEngine();
